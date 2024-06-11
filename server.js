@@ -64,11 +64,13 @@ app.get("/htmlDemo", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/htmlDemo.html"));
 });
 
+
+// Catch Error
 app.use((req, res) => {
     res.status(404).send("Page Not THERE, Are you sure of the path?");
 });
 
-// setup http server to listen on HTTP_PORT
+// Setup HTTP Server to Listen on HTTP_PORT
 collegeData.initialize()
     .then((result) => {
         console.log(result);
