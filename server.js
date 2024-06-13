@@ -15,6 +15,8 @@ const app = express();
 const collegeData = require("./modules/collegeData.js");
 const path = require('path');
 
+app.use(express.static(__dirname))
+
 // Get Students
 app.get("/students", (req, res) => {
     course = req.query.course
